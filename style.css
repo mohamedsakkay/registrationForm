@@ -1,0 +1,84 @@
+/* Réinitialisation des marges, paddings et boîtes de tous les éléments */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Désactivation du défilement du corps pour éviter les barres de défilement */
+body {
+  overflow: hidden;
+}
+
+/* Rendre les images fluides pour qu'elles s'ajustent à la taille parente */
+.img-fluid {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* Définition de la taille de la police pour la classe .fs */
+.fs {
+  font-size: 11px;
+}
+
+/* Positionnement du formulaire flottant avec une translation */
+.form-floating.mb-3.translate-middle {
+  transform: translate(-25%, -50%) !important;
+}
+
+/* Définition de la position top pour la classe .top-30 */
+.top-30 {
+  top: 30% !important;
+}
+
+/* Définition de la position top pour la classe .top-20 */
+.top-20 {
+  top: 23% !important;
+}
+
+/* Ajout d'un curseur pointer pour le span à l'intérieur de .form-floating.mb-3 */
+.form-floating.mb-3 span {
+  cursor: pointer;
+}
+
+/* Styles spécifiques pour les écrans jusqu'à 1200px de largeur */
+@media (max-width: 1200px) {
+  /* Inversion de la direction de la flexbox pour .d-flex.justify-content-between */
+  .d-flex.justify-content-between {
+    flex-direction: column-reverse;
+  }
+
+  /* Ajustement de la mise en page pour .form-check.form-check-inline.form-switch */
+  .form-check.form-check-inline.form-switch {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+/* Styles spécifiques pour les écrans jusqu'à 992px de largeur */
+@media (max-width: 992px) {
+  /* Masquer la colonne .col */
+  .col {
+    display: none;
+  }
+
+  /* Mise en page spécifique pour le conteneur avec une image de fond */
+  .container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url(./img/regis2.png);
+  }
+
+  /* Ajustement de la couleur du texte pour certains éléments */
+  .form-check-label,
+  .fs,
+  h1 {
+    color: white;
+  }
+
+  /* Ajustement de la position top pour .top-20 dans le contexte actuel */
+  .top-20 {
+    top: 21% !important;
+  }
+}
